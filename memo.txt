@@ -1,0 +1,23 @@
+◆ライブラリのコンパイル方法
+　(1) ./libtest*/ディレクトリに行ってmake
+
+　　　cd libtest2
+　　　make
+      cd ../libtest1
+      make
+
+　(2) libtest*.soをパス(LD_LIBRARY_PATH)の通った(通す)ディレクトリへコピーする。
+
+
+◆テストコードのコンパイル方法
+　(1) 元のディレクトリに戻ってmake
+
+　　　cd ..
+　　　make
+
+
+◆実行方法
+　必要に応じて実行する前にlibのパスを通し、実行
+
+　export LD_LIBRARY_PATH=~/dev/libtest/libtest1:~/dev/libtest/libtest2     <- 例
+　./test.out
